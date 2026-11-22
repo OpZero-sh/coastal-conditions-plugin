@@ -15,6 +15,9 @@
   "icon": "./assets/icon.png",
   "license": "LicenseRef-OpZero-Plugin",
   "network": {
-    "hosts": []
+    "hosts": [
+      "tide-times.mcp.opzero.sh",
+      "marine-conditions.mcp.opzero.sh"
+    ]
   }
 }
