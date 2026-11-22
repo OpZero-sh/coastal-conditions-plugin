@@ -13,6 +13,14 @@
       {
         "id": "coastal-brief",
         "path": "skills/coastal-brief/SKILL.md"
+      },
+      {
+        "id": "tide-lookup",
+        "path": "skills/tide-lookup/SKILL.md"
+      },
+      {
+        "id": "buoy-report",
+        "path": "skills/buoy-report/SKILL.md"
       }
     ],
     "mcpServers": [
