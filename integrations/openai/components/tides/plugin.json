@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coastal-conditions-tides",
+  "version": "1.0.0",
+  "description": "Find a tide station and its predicted high and low tides for a chosen date.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "homepage": "https://tide-times.mcp.opzero.sh/",
+  "repository": "https://github.com/OpZero-sh/coastal-conditions-plugin",
+  "license": "LicenseRef-OpZero-Plugin",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Tide Times",
+        "shortDescription": "Read tide predictions",
+        "longDescription": "Find a tide station and its predicted high and low tides for a chosen date.",
+        "developerName": "OpZero",
+        "category": "Productivity",
+        "websiteURL": "https://tide-times.mcp.opzero.sh/",
+        "privacyPolicyURL": "https://tide-times.mcp.opzero.sh/?page=privacy",
+        "supportURL": "https://tide-times.mcp.opzero.sh/?page=support",
+        "termsOfServiceURL": "https://opzero.sh/terms",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

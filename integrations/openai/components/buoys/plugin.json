@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coastal-conditions-buoys",
+  "version": "1.0.0",
+  "description": "Find a reporting buoy and read its latest wind, wave and water conditions.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "homepage": "https://marine-conditions.mcp.opzero.sh/",
+  "repository": "https://github.com/OpZero-sh/coastal-conditions-plugin",
+  "license": "LicenseRef-OpZero-Plugin",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Marine Conditions",
+        "shortDescription": "Read a buoy observation",
+        "longDescription": "Find a reporting buoy and read its latest wind, wave and water conditions.",
+        "developerName": "OpZero",
+        "category": "Productivity",
+        "websiteURL": "https://marine-conditions.mcp.opzero.sh/",
+        "privacyPolicyURL": "https://marine-conditions.mcp.opzero.sh/?page=privacy",
+        "supportURL": "https://marine-conditions.mcp.opzero.sh/?page=support",
+        "termsOfServiceURL": "https://opzero.sh/terms",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

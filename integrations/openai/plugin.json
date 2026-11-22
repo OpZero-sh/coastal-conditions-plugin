@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "coastal-conditions",
+  "version": "1.0.0",
+  "description": "Pair NOAA tide predictions with the latest buoy readings for a beach, inlet, or harbor.",
+  "author": {
+    "name": "OpZero",
+    "url": "https://opzero.sh"
+  },
+  "homepage": "https://github.com/OpZero-sh/coastal-conditions-plugin",
+  "repository": "https://github.com/OpZero-sh/coastal-conditions-plugin",
+  "license": "LicenseRef-OpZero-Plugin",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Coastal Conditions",
+        "shortDescription": "Check tides and buoy readings",
+        "longDescription": "Pair NOAA tide predictions with the latest buoy readings for a beach, inlet, or harbor.",
+        "developerName": "OpZero",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/OpZero-sh/coastal-conditions-plugin",
+        "privacyPolicyURL": "https://opzero.sh/privacy",
+        "supportURL": "https://opzero.sh/support",
+        "termsOfServiceURL": "https://opzero.sh/terms",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

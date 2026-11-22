@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "tides": {
+      "type": "http",
+      "url": "https://tide-times.mcp.opzero.sh/mcp"
+    },
+    "buoys": {
+      "type": "http",
+      "url": "https://marine-conditions.mcp.opzero.sh/mcp"
+    }
+  }
+}

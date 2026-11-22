@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "name": "coastal-conditions",
+  "version": "1.0.0",
+  "displayName": "Coastal Conditions",
+  "description": "Pair NOAA tide predictions with the latest buoy readings for a beach, inlet, or harbor.",
+  "compat": {
+    "source": "native",
+    "manifestDir": ".muse-plugin"
+  },
+  "capabilities": {
+    "skills": [
+      {
+        "id": "coastal-brief",
+        "path": "skills/coastal-brief/SKILL.md"
+      }
+    ],
+    "mcpServers": [
+      {
+        "id": "tides",
+        "transport": "http",
+        "url": "https://tide-times.mcp.opzero.sh/mcp"
+      },
+      {
+        "id": "buoys",
+        "transport": "http",
+        "url": "https://marine-conditions.mcp.opzero.sh/mcp"
+      }
+    ]
+  }
+}

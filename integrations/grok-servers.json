@@ -1,0 +1,16 @@
+{
+  "tides": {
+    "url": "https://tide-times.mcp.opzero.sh/mcp",
+    "allowed_tools": [
+      "find_tide_stations",
+      "tide_predictions"
+    ]
+  },
+  "buoys": {
+    "url": "https://marine-conditions.mcp.opzero.sh/mcp",
+    "allowed_tools": [
+      "find_buoys",
+      "marine_observations"
+    ]
+  }
+}
