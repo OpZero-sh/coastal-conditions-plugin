@@ -50,7 +50,7 @@ Field definitions, units and station kinds are in [references/buoy-observations.
 
 ## Edge cases
 
-- **Report is old.** If the latest report is more than about an hour old, state its age. If it is six hours old or more, say the reading is stale and do not call it current. In Claude Code the plugin's hook adds a note with the age in that case.
+- **Report is old.** If the latest report is more than about an hour old, state its age. If it is six hours old or more, say the reading is stale and do not call it current. Work the age out yourself from the `Latest report` time. Nothing else adds it.
 - **No recent observations.** The tool returns `Station <id> has no recent observations at NOAA.` Try the next nearest station.
 - **No name match.** `find_buoys` suggests latitude and longitude. Use them.
 - **Station far offshore.** A buoy tens of kilometers out sees different wind and waves from a beach or harbor. Give the distance and say so.

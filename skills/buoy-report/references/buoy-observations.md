@@ -43,7 +43,7 @@ Every output line below was read from live results of the `buoys` server (Marine
 - `Latest report` is in UTC. Convert it to local time for the reader and state the age.
 - The footer says each value is the most recent one reported in the past few hours, so a result can mix readings taken at different times.
 - The server does not state how often stations report or how often it refreshes. Use the report time, not an assumed schedule.
-- In Claude Code, the plugin's hook reads the report time after each `marine_observations` call and adds a note when the report is six hours old or more.
+- Nothing computes the age for you. After each `marine_observations` call, read the report time, work out the age, and say the reading is stale when the report is six hours old or more.
 
 ## Station kinds from `find_buoys`
 

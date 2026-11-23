@@ -32,9 +32,9 @@ Each skill is a set of written instructions that Claude loads when a request mat
 
 In Cowork or Claude Code, the `station-pairing` agent matches several spots to representative stations and explains each choice. It can call only the four read only tools of the two services listed below.
 
-## Hook
+## Hooks
 
-In Claude Code, one hook runs after each buoy reading. It starts `node` with `scripts/observation-age.cjs`, which reads the tool result passed to it, finds the report time, and adds a one line note for Claude when the report is six hours old or more. The script makes no network request, reads no environment variable and writes no file. It needs Node.js on your path. Without Node.js the hook cannot run, the tool result is unaffected, and the skills still read observation times themselves.
+None. This plugin has no hooks and runs no code on your machine. The `buoy-report` skill tells Claude to read the report time itself, state the age of an older report and call a reading stale when it is six hours old or more.
 
 ## Sources and coverage
 
@@ -49,12 +49,12 @@ The plugin connects Claude to two hosted services over HTTPS. A request carries 
 - [tide-times](https://tide-times.mcp.opzero.sh/) at `tide-times.mcp.opzero.sh` · [Privacy](https://tide-times.mcp.opzero.sh/?page=privacy) · [Support](https://tide-times.mcp.opzero.sh/?page=support)
 - [marine-conditions](https://marine-conditions.mcp.opzero.sh/) at `marine-conditions.mcp.opzero.sh` · [Privacy](https://marine-conditions.mcp.opzero.sh/?page=privacy) · [Support](https://marine-conditions.mcp.opzero.sh/?page=support)
 
-The only local process is the hook described above. The manifest declares an empty `network.hosts` list because that hook reaches no host.
+The plugin starts no local process. The two services are declared in `.mcp.json`.
 
-The repository also holds files for other clients. The plugin never runs them. They do something only if you run them yourself from a checkout.
+The repository also holds configuration files for other clients. The plugin never runs them. The two scripts that read them are not in this repository. They live in the catalog repository, https://github.com/OpZero-sh/plugins, and do something only if you clone it and run them yourself.
 
-- `scripts/build_openai.py` reads files in this repository and writes ZIP packages to the folder you name. It makes no network request.
-- `integrations/grok_example.py` prints a request preview when run with `--dry-run`. Without that flag it reads `XAI_API_KEY`, and `XAI_MODEL` if set, from your environment and sends your question and the two service URLs to the xAI API at `api.x.ai`.
+- `tools/build_openai.py` in the catalog reads files in a checkout of this repository and writes ZIP packages to the folder you name. It makes no network request.
+- `tools/grok_example.py` in the catalog prints a request preview when run with `--dry-run`. Without that flag it reads `XAI_API_KEY`, and `XAI_MODEL` if set, from your environment and sends your question and the two service URLs to the xAI API at `api.x.ai`.
 - `integrations/grok-servers.json` and the `integrations/openai` folder are configuration read by those two scripts.
 
 ## In use
